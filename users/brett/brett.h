@@ -1,3 +1,4 @@
+#include QMK_KEYBOARD_H
 #pragma once
 
 enum userspace_custom_keycodes {
