@@ -15,5 +15,8 @@
       "xstddef": "c",
       "type_traits": "c",
       "utility": "c"
-    }
+    },
+    "nixEnvSelector.nixShellConfig": "${workspaceRoot}/shell.nix",
+    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "C_Cpp.dimInactiveRegions": false
 }

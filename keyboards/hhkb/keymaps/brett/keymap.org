@@ -1,0 +1,158 @@
+#+TITLE: Keymap
+
+After making changes here call org-babel-tangle (C-c C-v t).
+
+* Layout
+** Layers
+The layers are maintained in tables, with the thumb keys on the bottom row.  NP
+indicates the key is not present and is used to fill in the table around the
+thumb keys.  The grid arrangement of the tables does not imply a particular
+physical layout.
+
+Basic keycodes are entered without the KC_ prefix.  Symbols can be entered as-is
+(excepting '"' (DQUO) and '|' (PIPE)).  Empty cells are unused.
+
+The base layer has both halves of the layout joined for convenience.  Other
+layers are specified as a single hand.
+
+
+*** Base  (BASE)
+|---------+---+---+---+---+---+---+---+---+---+---+--------+--------+------+---|
+| Esc     | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | -      | =      | \    | ` |
+|---------+---+---+---+---+---+---+---+---+---+---+--------+--------+------+---|
+| Tab     | Q | W | E | R | T | Y | U | I | O | P | [      | ]      | Bspc |   |
+|---------+---+---+---+---+---+---+---+---+---+---+--------+--------+------+---|
+| Control | A | S | D | F | G | H | J | K | L | ; | '      | Return |      |   |
+|---------+---+---+---+---+---+---+---+---+---+---+--------+--------+------+---|
+| LShift  | Z | X | C | V | B | N | M | , | . | / | RShift | HHKB   |      |   |
+|---------+---+---+---+---+---+---+---+---+---+---+--------+--------+------+---|
+
+            |------+------+------------+------+------|
+            | LAlt | LGUI | Space/Prog | RGUI | RAlt |
+            |------+------+------------+------+------|
+
+*** HHKB
+|---------+------+------+------+------+------+------+------+--------+---------+--------+--------+------+------+-----|
+| Flash   | F1   | F2   | F3   | F4   | F5   | F6   | F7   | F8     | F9      | F10    | F11    | F12  | Ins  | Del |
+|---------+------+------+------+------+------+------+------+--------+---------+--------+--------+------+------+-----|
+| Caps    | F13  | F14  | F15  | F16  | F17  | F18  | F19  | F20    | F21     | F22    | F23    | F24  | Bspc |     |
+|---------+------+------+------+------+------+------+------+--------+---------+--------+--------+------+------+-----|
+| Control | Prev | Next | Find | Tmux | Prsc | Back | Home | Search | Forward | ;      | '      | Exec |      |     |
+|---------+------+------+------+------+------+------+------+--------+---------+--------+--------+------+------+-----|
+| LShift  | Vol+ | Vol- | Mute | Sel  | b    | n    | m    | ,      | Again   | Search | RShift | HHKB |      |     |
+|---------+------+------+------+------+------+------+------+--------+---------+--------+--------+------+------+-----|
+
+                                |------+------+------------+------+------|
+                                | Menu | LGUI | Play/Pause | RGUI | Menu |
+                                |------+------+------------+------+------|
+*** PROG
+A layer for programming symbols
+
+|-----------+-------+-------+-------+-------+-------+-------+-------+-------+-------+--------+--------+--------+------+---|
+| Esc       | TTY 1 | TTY 2 | TTY 3 | TTY 4 | TTY 5 | TTY 6 | TTY 7 | TTY 8 | TTY 9 | TTY 10 | TTY 11 | TTY 12 | \    | ` |
+|-----------+-------+-------+-------+-------+-------+-------+-------+-------+-------+--------+--------+--------+------+---|
+| TG(MOUSE) | >>=   | @     | =<<   | =>    | ‖     | <>    | <｜>  | <*>   | <@>   | ｜>    | <$     | $>     | Bspc |   |
+|-----------+-------+-------+-------+-------+-------+-------+-------+-------+-------+--------+--------+--------+------+---|
+| Control   | ->    | *     | <#>   | <$>   | &&    | Left  | Down  | Up    | Right | ::     | `      | Return |      |   |
+|-----------+-------+-------+-------+-------+-------+-------+-------+-------+-------+--------+--------+--------+------+---|
+| Tmux      | <<<   | >>>   | <*    | *>    | '&    | <=<   | >=>   | <-    | ->    | <>     | Tmux   | Leader |      |   |
+|-----------+-------+-------+-------+-------+-------+-------+-------+-------+-------+--------+--------+--------+------+---|
+
+                    |------+------+----------------------------+------+------|
+                    | LAlt | LGUI | ***** * Space/Prog ***** * | RGUI | RAlt |
+                    |------+------+----------------------------+------+------|
+*** MOUSE
+|--------------+---------+---------+---------+---------+---------+-------+-------+---------+---------+---------+-----------+-----------------+--------+---|
+| Esc          | Speed 1 | Speed 2 | Speed 3 | 4       | 5       | 6     | 7     | 8       | 9       | 0       | -         | =               | \      | ` |
+|--------------+---------+---------+---------+---------+---------+-------+-------+---------+---------+---------+-----------+-----------------+--------+---|
+| Mouse(Tab)   | Q       | Up      | Button3 | Button4 | Button5 | Y     | U     | Button3 | Button4 | Button5 | [         | ]               | Backsp |   |
+|--------------+---------+---------+---------+---------+---------+-------+-------+---------+---------+---------+-----------+-----------------+--------+---|
+| Control(Esc) | Left    | Down    | Right   | Button1 | Button2 | SLeft | SDown | SUp     | SRight  | Button1 | Button2   | Control(Return) |        |   |
+|--------------+---------+---------+---------+---------+---------+-------+-------+---------+---------+---------+-----------+-----------------+--------+---|
+| LShift(()    | Z       | X       | C       | V       | B       | N     | M     | Button5 | Button4 | Button3 | RShift()) | HHKB            |        |   |
+|--------------+---------+---------+---------+---------+---------+-------+-------+---------+---------+---------+-----------+-----------------+--------+---|
+
+                    |------+------+----------------------------+------+------|
+                    | LAlt | LGUI | ***** * Space/Prog ***** * | RGUI | RAlt |
+                    |------+------+----------------------------+------+------|
+
+** HHKB
+
+* Custom Keycodes
+Custom keycodes for functional programming
+
+#+NAME: custom-keycodes
+| =>  | FAT_ARROW     |
+| ->  | SKINNY_ARROW  |
+| <-  | REVERSE_ARROW |
+| <>  | CONTAT        |
+| <$> | MAP           |
+| <#> | MAP_FLIPPED   |
+| <@> | FLAP          |
+|     |               |
+* Code generation
+Produce layer enums from layer names in hold table.
+
+#+NAME: table-enums
+#+BEGIN_SRC python :var hold_table=hold :var mods_list=mods :tangle no
+mods_dict = dict.fromkeys(mods_list)
+results = 'enum layers { BASE, '
+for hold_row in hold_table:
+  for hold in hold_row:
+    if hold not in mods_dict and hold != '' and hold != 'NP' and hold != 'RST':
+      results += hold + ', '
+results = results.rstrip(', ') + ' };'
+return results
+#+END_SRC
+* Userspace Mapping
+** config.h
+
+Config options.  Automatically included.
+
+[[file:config.h][users/brett/config.h]]
+#+BEGIN_SRC C :noweb yes :padline no :tangle config.h
+// <<header>>
+
+#pragma once
+
+// Combos
+#define COMBO_COUNT 15
+
+#define LEADER_TIMEOUT 800
+
+// Really fast combos
+#define COMBO_TERM 100
+
+// Define mousekey settings
+#define MOUSEKEY_DELAY 0
+#define MOUSEKEY_INTERVAL 20
+#define MOUSEKEY_MAX_SPEED 2
+#define MOUSEKEY_TIME_TO_MAX 5
+#define MOUSEKEY_WHEEL_DELAY 0
+
+#define LSPO_KEY KC_9
+#define RSPC_KEY KC_0
+#define LSPO_MOD KC_LSHIFT
+#define RSPC_MOD KC_RSHIFT
+
+// This makes it possible to do rolling combos (zx) with keys that convert to other keys on hold (z becomes ctrl when
+// you hold it, and when this option isn't enabled, z rapidly followed by x actually sends Ctrl-x. That's bad.)
+#define IGNORE_MOD_TAP_INTERRUPT
+#+END_SRC
+
+#+RESULTS:
+
+** rules.mk
+
+Build options. automatically included
+
+[[file:rules.mk][users/brett/rules.mk]]
+#+BEGIN_SRC makefile :noweb yes :padline no :tangle rules.mk
+# <<header>>
+MOUSEKEY_ENABLE  = yes
+COMBO_ENABLE     = yes
+TAP_DANCE_ENABLE = no
+LEADER_ENABLE    = yes
+UNICODE_ENABLE   = no
+EXTRAFLAGS      += -flto # Link Time Optimization to reduce code size, 31358->28034/28672
+#+END_SRC
